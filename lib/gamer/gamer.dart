@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:tetris/admop.dart';
 import 'package:tetris/gamer/block.dart';
 import 'package:tetris/main.dart';
 import 'package:tetris/material/audios.dart';
+
 
 ///the height of game pad
 const GAME_PAD_MATRIX_H = 20;
@@ -186,6 +188,15 @@ class GameControl extends State<Game> with RouteAware {
       _startGame();
     }
   }
+  void showInterstitialAd(){
+    // showInterstitial();
+    showInterstitial();
+  }
+  void showRewardAd(){
+    // showInterstitial();
+    showReward();
+  }
+
 
   void down({bool enableSounds = true}) {
     if (_states == GameStates.running) {
@@ -351,6 +362,13 @@ class GameControl extends State<Game> with RouteAware {
         await Future.delayed(_REST_LINE_DURATION);
         return line != GAME_PAD_MATRIX_H;
       });
+      if(numberOfShowingAd>2){
+        showInterstitial();
+        numberOfShowingAd=0;
+      }else{
+        numberOfShowingAd+=1;
+      }
+
       setState(() {
         _states = GameStates.none;
       });
@@ -358,6 +376,7 @@ class GameControl extends State<Game> with RouteAware {
   }
 
   void _startGame() {
+
     if (_states == GameStates.running && _autoFallTimer?.isActive == false) {
       return;
     }

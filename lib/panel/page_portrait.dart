@@ -1,13 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:tetris/admop.dart';
 import 'package:tetris/main.dart';
 import 'package:tetris/panel/controller.dart';
 import 'package:tetris/panel/screen.dart';
 
 part 'page_land.dart';
+class PagePortrait extends StatefulWidget {
+  const PagePortrait({Key? key}) : super(key: key);
 
-class PagePortrait extends StatelessWidget {
+  @override
+  State<PagePortrait> createState() => _PagePortraitState();
+}
+
+class _PagePortraitState extends State<PagePortrait> {
+  @override
+  void initState(){
+    super.initState();
+    loadInterstitialAd();
+    loadRewardVideoAd();
+    rewardedAd.load();
+    interstitialAd.load();
+  }
+
   @override
   Widget build(BuildContext context) {
+
     final size = MediaQuery.of(context).size;
     final screenW = size.width * 0.8;
 
@@ -18,7 +36,11 @@ class PagePortrait extends StatelessWidget {
           padding: MediaQuery.of(context).padding,
           child: Column(
             children: <Widget>[
-              Spacer(),
+              // Spacer(flex: 1,),
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text("༺ 𝕋𝕖𝕥𝕣𝕚𝕤 𝟜𝕌 ༻",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.white,fontStyle: FontStyle.italic),),
+              ),
               _ScreenDecoration(child: Screen(width: screenW)),
               Spacer(flex: 2),
               GameController(),

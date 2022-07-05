@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "977871380004",
-    "project_id": "we4u-play",
-    "storage_bucket": "we4u-play.appspot.com"
+    "project_number": "317749609024",
+    "project_id": "tetris4u-c3b4f",
+    "storage_bucket": "tetris4u-c3b4f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:977871380004:android:19a02e7999d7539eff02b1",
+        "mobilesdk_app_id": "1:317749609024:android:846e89168181e3386015a5",
         "android_client_info": {
-          "package_name": "com.ytview.we4uplay"
+          "package_name": "com.ytview.tetris4u"
         }
       },
       "oauth_client": [
         {
-          "client_id": "977871380004-vs47mib8mmq9s2plccpdehcced9d63al.apps.googleusercontent.com",
+          "client_id": "317749609024-nuvoc5labm814hd1kkg4oqvlhbmig20b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.ytview.we4uplay",
+            "package_name": "com.ytview.tetris4u",
             "certificate_hash": "ae2e4a424fd211abebc165564becc0cb8a2ca7aa"
           }
         },
         {
-          "client_id": "977871380004-u96f85557h44fnt7st2jp3g73u9n47ab.apps.googleusercontent.com",
+          "client_id": "317749609024-2ivfql9d6ldq8rkcgtmfcd9lbtmk3ob3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA7GEjDZKxIZ7ZcBrI3hh14ZDWDGQCwHtw"
+          "current_key": "AIzaSyBhARtD4YSwqcoo5Rbhtwxib7KJT_rFRTU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "977871380004-u96f85557h44fnt7st2jp3g73u9n47ab.apps.googleusercontent.com",
+              "client_id": "317749609024-2ivfql9d6ldq8rkcgtmfcd9lbtmk3ob3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

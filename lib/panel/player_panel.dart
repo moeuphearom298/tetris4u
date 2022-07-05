@@ -72,8 +72,8 @@ class _GameUninitialized extends StatelessWidget {
             IconDragon(animate: true),
             SizedBox(height: 16),
             Text(
-              "tetrix",
-              style: TextStyle(fontSize: 20),
+              "༺ 𝐓𝐞𝐭𝐫𝐢𝐬 𝟒𝐔 ༻",
+              style: TextStyle(fontSize: 16),
             ),
           ],
         ),

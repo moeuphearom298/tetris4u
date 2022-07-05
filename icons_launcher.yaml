@@ -1,0 +1,6 @@
+flutter_icons:
+  image_path: 'assets/icons.png'
+#  image_path_ios: 'assets/icons.png'
+  adaptive_icon_round: 'assets/circle.png'
+  ios: false
+  android: true

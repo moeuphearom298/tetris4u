@@ -1,6 +1,21 @@
 part of 'page_portrait.dart';
 
-class PageLand extends StatelessWidget {
+class PageLand extends StatefulWidget {
+  const PageLand({Key? key}) : super(key: key);
+
+  @override
+  State<PageLand> createState() => _PageLandState();
+}
+
+class _PageLandState extends State<PageLand> {
+  @override
+  void initState(){
+    super.initState();
+    loadInterstitialAd();
+    loadRewardVideoAd();
+    rewardedAd.load();
+    interstitialAd.load();
+  }
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -27,7 +42,7 @@ class PageLand extends StatelessWidget {
                   ],
                 ),
               ),
-              _ScreenDecoration(child: Screen.fromHeight(height * 0.8)),
+              _ScreenDecoration(child: Screen.fromHeight(height * 0.87)),
               Expanded(
                 child: Column(
                   children: <Widget>[
@@ -44,3 +59,4 @@ class PageLand extends StatelessWidget {
     );
   }
 }
+
